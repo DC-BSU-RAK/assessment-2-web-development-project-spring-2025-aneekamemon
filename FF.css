@@ -1,0 +1,778 @@
+
+
+/* This css creates the lined background, and sets the margins and parameters in place. */
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Melodrama', serif;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 0, 0, 0.3) 1px, transparent 1px );
+    background-size: 100% 50px, 50px 100%;
+    background-color: var(--background--color);
+}
+
+
+.darker-grotesque {
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+/* For the navbar  */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* For the navstickers */
+
+.navsticker {
+    width: 220px;
+    height: auto;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    filter: var(--filtershadow);
+    cursor: pointer;
+}
+
+.navsticker:hover {
+    transform: scale(1.2);
+    filter: var(--filtershadow-hover);
+} 
+
+.logocontainer {
+    width: 100%;
+    max-width: 150px;
+    padding: 0 10px;
+    margin-left: -160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frostlogoimg {
+    height: 70px;
+    width: auto;
+    filter: var(--filtershadow);
+    transition: transform 0.3s ease;
+}
+
+.frostlogoimg:hover {
+    transform: scale(1.1);
+}
+
+/* For the FROST title */
+
+.titlebox {
+
+    width: 100%;
+    height: 600px;
+    overflow: visible;
+    position: relative;
+    top: 140px;
+
+}
+
+.title {
+
+    font-weight: 700;
+    display: flex;
+    position: relative;
+    font-size: 400px;
+    align-items: center;
+    justify-content: center;
+    color: var(--title--color);
+    z-index: 1;
+    top: -40px;
+    transition: color 1s ease;
+}
+
+.title:hover, .slogan {
+
+    color: #739ab9;
+    transition: color 1s ease;
+
+}
+
+/* slogan css */
+
+.slogans {
+
+    color:var(--text--color);
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    text-align: right;
+    left: 1050px;
+    top: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: color 1s ease;
+    display: inline-block;
+
+}
+
+/* The general description for the watch company */
+
+.description, .aboutfrost {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color:var(--text--color);
+    z-index: 3;
+    width: 950px;
+    font-size: 25px;
+    text-align: left;
+    font-weight: 300;
+    left: 100px;
+    top: -50px;
+    transition: color 1s ease;
+    font-family: "Darker Grotesque", sans-serif;
+}
+
+
+#theme, .viewallsticker, .learnmoresticker {
+
+    background: none;
+    border: none;
+    padding: 0;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    filter: var(--filtershadow);
+    cursor: pointer;
+}
+
+
+
+#theme img, .viewallsticker img{
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    position: relative;
+    top: -800px;
+}
+
+#theme:hover, .viewallsticker:hover, .learnmoresticker:hover {
+    filter: var(--filtershadow-hover);
+}
+
+.viewallsticker img {
+    position: relative;
+    top: -250px;
+    left: 950px;
+    width: 200px;
+}
+
+.learnmoresticker img {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    position: relative;
+    width: 400px;
+    top: -2550px;
+    left: 1050px;
+    transition: transform 1.3s ease-in-out;
+}
+
+
+
+@keyframes move {
+    0% {transform: scale(1.2) translate(0px, 0px) rotate(0deg); }
+    25% {transform: scale(1.2) translate(5px, -5px) rotate(-3deg); }
+    50% {transform: scale(1.2) translate(-2px, 2px) rotate(1deg); }
+    75% {transform: scale(1.2) translate(5px, 5px) rotate(2deg); }
+    100% {transform: scale(1.2) translate(0px, 0px) rotate(-1deg); }
+
+
+
+}
+
+
+.viewallsticker img:hover {
+    animation: move 1s infinite ease-in-out;
+
+}
+
+:root {
+
+    --background--color: #fbf0d8;
+    --title--color: #06795D;
+    --text--color: #48192E;
+    --filtershadow: drop-shadow(0 0 28px rgba(88, 12, 68, 0.5));
+    --filtershadow-hover: drop-shadow(0 0 18px rgba(15, 100, 65, 0.8));
+
+    }
+
+    [data-theme="light"] {
+        --background--color: black;
+        --title--color: #b02a29;
+        --text--color: #fbf0d8;
+        --filtershadow: drop-shadow(0 0 28px rgba(255, 149, 0, 0.5));
+        --filtershadow-hover: drop-shadow(0 0 18px rgba(255, 102, 102, 0.8));
+    }
+    
+    body {
+        background-color: var(--background--color);
+        color: var(--text-color);
+        transition: var(--background--color 0.5s ease, color 0.5s ease);
+    }
+  
+  
+
+
+
+/* heading */
+
+.heading, .org, .frostfavs {
+    font-weight: 700;
+    display: flex;
+    position: relative;
+    font-size: 300px;
+    align-items: right;
+    justify-content: right;
+    color: var(--title--color);
+    z-index: 1;
+    transition: color 1s ease;
+    opacity: 0;
+    transform: translateX(500px);
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+}
+
+.heading.show, .info-panel.show, .org.show, .frostfavs.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.org {
+    position: relative;
+    font-size: 200px;
+    transform: translateX(-800px);
+    align-items: left ;
+    justify-content: left;
+    top: -500px;
+}
+
+
+
+/* For the carousel */
+
+
+.carousel-container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card {
+    position: absolute;
+    width: 350px;
+    height: 450px;
+    top: 90px;
+    left: 250px;
+    background: black;
+    border: 7px var(--title--color) solid;
+    border-radius: 50px;
+    box-shadow: 6px 10px 30px rgba(123, 36, 36, 0.5);
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 1s, opacity 1s;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 60px;
+    color: var(--title--color);
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.arrow:hover {
+transform: scale(1.5);
+}
+
+.arrow.left {
+    left: 300px;
+    top: 600px;
+}
+
+.arrow.right {
+    left: 530px;
+    top: 600px;
+}
+
+.card video,
+.card img.hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.card img.hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.card:hover img.hover-image {
+    opacity: 1;
+}
+
+/* the information panel next to the images and videos */
+
+.info-panel {
+    position: relative;
+    top: -350px;
+    color: var(--text--color);
+    left: 850px;
+    width: 500px;
+    height: 600px;
+    font-weight: 500;
+    border: 5px var(--text--color) solid;
+    border-radius:  30px;
+    opacity: 0;
+    transform: translateX(500px);
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+
+}
+
+.info-panel h1 {
+    padding: 10px;
+    margin-top: 0;
+    font-size: 45px;
+}
+
+.info-panel p {
+    padding: 10px;
+    margin-top: 0;
+    font-size: 23px;
+    font-family: "Darker Grotesque", sans-serif;
+
+}
+
+
+
+
+/* Some design elements */
+
+.designsec1 {
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+
+}
+
+.line1, .line2 {
+    width: 85%;
+    height: 50px;
+    background-color: var(--text--color);
+    position: relative;
+    opacity: 0;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+
+}
+
+.line1 {
+    top: -700px;
+    margin: 20px;
+    align-self: flex-start;
+    transform: translateX(-800px);
+}
+
+.line2 {
+    top: -700px;
+    align-self: flex-end;
+    margin: 20px;
+    top: -23rem;
+    transform: translateX(800px);
+}
+
+.line1.show, .line2.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.comma1, .comma2 {
+    position: relative;
+    font-size: 70rem;
+    color: var(--title--color);
+    opacity: 0;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+
+}
+
+.comma1 {
+    rotate: 180deg;
+    align-self: flex-end;
+    margin-top: -70rem;
+    right: 20px;
+    transform: translateY(800px);
+
+}
+
+.comma2 {
+    align-self: flex-start;
+    left: 20px;
+    margin-top: -100rem;
+    transform: translateY(800px);
+
+}
+
+.comma1.show, .comma2.show , .aboutfrost.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slogan1 {
+    opacity: 0;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+}
+
+.slogan1.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+
+        /* This specifically changes the position and size of the commas to match the layout
+        on a desktop, not just the laptop */
+@media (min-width:1640px) {
+    .comma1,
+    .comma2 {
+        font-size: 90rem;
+        margin-top: -100rem;
+    }
+    .comma1 {
+        margin-top: -45rem;
+    }
+    .comma2 {
+        margin-top: -120rem;
+    }
+}
+
+
+
+.speech {
+    position: relative;
+    text-align: center;
+    color: var(--text--color);
+    margin-top: -70rem;
+    font-size: 30px;
+
+}
+
+.po {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.redbox {
+    width: 1250px;
+    transform: scaleX(-1) translateX(-800px);
+    margin-top: -1810px;
+    margin-left: 100px;
+    opacity: 0;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+}
+
+.redbox.show {
+    opacity: 1;
+    transform: scaleX(-1) translateX(0);
+}
+
+.aboutfrost {
+    position: relative;
+    top: -1250px;
+    opacity: 0;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+    transform: translateX(-800px);
+
+}
+
+
+/* Last section */
+
+/* Frost favorites */
+
+.frostfavs {
+    position: relative;
+    font-size: 200px;
+    transform: translateX(-800px);
+    align-items: center ;
+    justify-content: center;
+    top: -1300px;
+}
+
+
+.galleryitem2:hover + .galleryitem .hoverimage {
+    opacity: 1;
+}
+
+.galleryitem2:hover + .galleryitem .yoyo {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galleryitem:hover .defaultimage {
+    opacity: 0;
+}
+
+.galleryitem:hover .hoverimage {
+    opacity: 1;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1250px;
+    margin: 0 auto;
+
+}
+
+.galleryitem, .galleryitem2 {
+    position: relative;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    transition: all 1.8s ease;
+    top: -1250px;
+
+}
+
+.imagecontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.galleryimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.defaultimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hoverimage {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contentoverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0, 0.6));
+    padding: 20px;
+    color: var(--text--color);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.galleryitem:hover .contentoverlay,
+.galleryitem2:hover .contentoverlay {
+    transform: translateY(0);
+}
+
+.readmore {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text--color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.yoyo {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25rem;
+    font-weight: bold;
+    color: var(--title--color);
+    background-color: var(--text--color);
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.slogan1 {
+
+    color:var(--text--color);
+    font-style: italic;
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    top: -1500px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    align-items: right;
+    justify-content: right;
+    left: 870px;
+    transform: translateX(-800px);
+
+}
+
+.viewallsticker1 {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    position: relative;
+}
+
+.viewallsticker1:hover{
+    filter: var(--filtershadow-hover);
+}
+
+.viewallsticker1 img {
+    position: relative;
+    top: -1380px;
+    left: -450px;
+    width: 300px;
+    z-index: 10;
+}
+
+
+.footerz {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(0.5px);
+    background-color: rgba(53, 0, 0, 0.091);
+    display: flex;
+    border-top: 5px solid rgb(91, 91, 91);
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 99;
+    flex-direction: column;
+    
+}
+
+
+.contentoffooter {
+    color: var(--title--color);
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+}
+
+.contentoffooter h1, .address {
+    position: relative;
+    font-family: 'Melodrama', serif;
+    font-size: 120px;
+    overflow: hidden;
+    background: linear-gradient(to right, var(--title--color), var(--text--color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.address {
+    margin-top: 0;
+    font-size: 20px;
+    font-family: "Darker Grotesque", sans-serif;
+}
+
+.ontheleft {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 180px;
+    height: auto;
+    color: var(--text--color);
+}
+
+.footerlogo {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 100px;
+    height: auto;
+}
+
+/* The footer links */
+
+.footerlinks {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.links {
+    background-color: var(--title--color);
+    color: var(--text--color);
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 3px solid #830000;
+}
+
+.links:hover {
+    background-color: transparent;
+    color: var(--text--color);
+    border-color: var(--title--color) ;
+}
