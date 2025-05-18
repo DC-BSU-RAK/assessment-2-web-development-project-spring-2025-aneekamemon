@@ -244,9 +244,9 @@ grid.addEventListener("click", (e) => {
 
 // For the slide in texts
 
-const processfrost = document.querySelectorAll('.processfrost');
-const verify = document.querySelectorAll('.verify');
-const condition = document.querySelectorAll('.condition');
+const processfrost = document.querySelectorAll('.descripcontainer');
+const verify = document.querySelectorAll('.verifycontainer');
+const condition = document.querySelectorAll('.conditionscontainer');
 
 
 
