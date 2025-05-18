@@ -72,11 +72,13 @@ html, body {
 /* For the navstickers */
 
 .navsticker {
-    width: 220px;
+    width: 100px;
     height: auto;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
     filter: var(--filtershadow);
     cursor: pointer;
+    margin-top: 30px;
+    margin-right: 80px;
 }
 
 .navsticker:hover {
@@ -144,12 +146,16 @@ html, body {
     
     
     
-    #theme img{
+    #theme img, .viewallsticker img{
         background-color: transparent;
         border: none;
-        width: 150px;
+        width: 130px;
         position: relative;
+        margin-top: 50px;
+        padding: 50px;
     }
+    
+
     
     #theme:hover{
         filter: var(--filtershadow-hover);
