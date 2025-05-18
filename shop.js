@@ -56,6 +56,28 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (yu
 });
 
 
+// For the slide in texts
+
+const verifycontainer = document.querySelectorAll('.verifycontainer');
+const descripcontainer = document.querySelectorAll('.descripcontainer');
+const conditionscontainer = document.querySelectorAll('.conditionscontainer');
+
+
+
+const ob = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }   else {
+            entry.target.classList.remove('show');
+        }
+    }); 
+});
+
+verifycontainer.forEach(el => ob.observe(el));
+descripcontainer.forEach(el => ob.observe(el));
+conditionscontainer.forEach(el => ob.observe(el));
+
 
 
 const watches = [
@@ -242,24 +264,3 @@ grid.addEventListener("click", (e) => {
 });
 
 
-// For the slide in texts
-
-const processfrost = document.querySelectorAll('.descripcontainer');
-const verify = document.querySelectorAll('.verifycontainer');
-const condition = document.querySelectorAll('.conditionscontainer');
-
-
-
-const ob = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }   else {
-            entry.target.classList.remove('show');
-        }
-    }); 
-});
-
-verify.forEach(el => ob.observe(el));
-processfrost.forEach(el => ob.observe(el));
-condition.forEach(el => ob.observe(el));
