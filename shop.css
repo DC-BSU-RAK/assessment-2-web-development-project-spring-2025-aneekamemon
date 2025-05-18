@@ -1,0 +1,703 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Melodrama', serif;
+    overflow-x: hidden;
+    height: 100%;
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 0, 0, 0.3) 1px, transparent 1px );
+    background-size: 100% 50px, 50px 100%;
+    background-color: var(--background--color);
+}
+
+
+.darker-grotesque {
+    font-family: "Darker Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titleboxw {
+    align-items: center;
+    text-align: center;
+    position: static;
+    z-index: 1;
+}
+
+.titlew, .titlec, .titlef {
+    font-weight: 700;
+    font-size: 120px;
+    color: var(--title--color);
+    transition: color 1s ease;
+}
+
+.titlec {
+    font-size: 190px;
+}
+
+.titlew:hover {
+    color: #739ab9;
+    transition: color 1s ease;
+
+}
+
+.titlef {
+    font-size: 240px;
+}
+
+.titlef:hover {
+    color: #739ab9;
+    transition: color 1s ease;
+
+}
+
+
+/* For the navbar  */
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+
+/* For the navstickers */
+
+.navsticker {
+    width: 220px;
+    height: auto;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    filter: var(--filtershadow);
+    cursor: pointer;
+}
+
+.navsticker:hover {
+    transform: scale(1.2);
+    filter: var(--filtershadow-hover);
+} 
+
+.logocontainer {
+    width: 100%;
+    max-width: 150px;
+    padding: 0 10px;
+    margin-left: -160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frostlogoimg {
+    height: 70px;
+    width: auto;
+    filter: var(--filtershadow);
+    transition: transform 0.3s ease;
+}
+
+.frostlogoimg:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+:root {
+
+    --background--color: #fbf0d8;
+    --title--color: #06795D;
+    --text--color: #48192E;
+    --filtershadow: drop-shadow(0 0 28px rgba(88, 12, 68, 0.5));
+    --filtershadow-hover: drop-shadow(0 0 18px rgba(15, 100, 65, 0.8));
+
+    }
+
+    [data-theme="light"] {
+        --background--color: black;
+        --title--color: #b02a29;
+        --text--color: #fbf0d8;
+        --filtershadow: drop-shadow(0 0 28px rgba(255, 149, 0, 0.5));
+        --filtershadow-hover: drop-shadow(0 0 18px rgba(255, 102, 102, 0.8));
+    }
+    
+    body {
+        background-color: var(--background--color);
+        color: var(--text-color);
+        transition: var(--background--color 0.5s ease, color 0.5s ease);
+    }
+    
+    #theme {
+
+        background: none;
+        border: none;
+        padding: 0;
+        transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+        filter: var(--filtershadow);
+        cursor: pointer;
+    }
+    
+    
+    
+    #theme img{
+        background-color: transparent;
+        border: none;
+        width: 150px;
+        position: relative;
+    }
+    
+    #theme:hover{
+        filter: var(--filtershadow-hover);
+    }
+    
+/* This is the grid layout for the complete set of watches */
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);   
+    gap: 15px;
+}
+
+.watchbox {
+    font-size: 25px;
+    border: 3px solid var(--text--color);
+}
+
+.grid {
+    flex: 1;
+    position: relative;
+    color: var(--text--color);
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    min-height: 340px;
+}
+
+/* This hover section causes the grid to rise upwards and create a sligh shadow 
+beneath it */
+
+.grid:hover {
+    transform: translateY(-6px);
+    box-shadow: 5px 18px 23px rgba(149, 45, 45, 0.129);
+}
+
+.grid img {
+    padding: 20px 0px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* The grid showcases watches in 3s with a gap for a sharp look. */
+
+.grid .title {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-weight: bolder;
+    padding: 0px 20px;
+    color: var(--text--color);
+}
+
+.grid .price {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    font-weight: bolder;
+    padding: 0px 20px;
+    color: var(--text--color);
+}
+
+.loadmorebutton {
+    margin: 10px auto 0;
+    display: block;
+    padding: 20px 35px ;
+    background: var(--title--color);
+    border: none;
+    border-radius: 30px;
+    color: var(--text--color);
+    font-weight: bolder;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 4px solid var(--title--color);
+}
+
+.loadmorebutton:hover {
+    background: transparent;
+}
+
+.productwatch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.productwatch.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.watchcontent {
+    border: 1px solid #444;
+    background: var(--title--color);
+    color: var(--text--color);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 750px;
+    width: 92%;
+    gap: 12px;
+    flex-wrap: wrap;
+    display: flex;
+    box-shadow: 0 0 35px rgba(129, 37, 37, 0.5);
+
+}
+
+.watchcontent img {
+    object-fit: cover;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.watchinfo {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+
+}
+
+.watchinfo h1 {
+    color: var(--text--color);
+
+}
+
+
+.watchinfo h2 {
+    margin-bottom: 5px;
+    color: var(--text--color);
+}
+
+.watchinfo p {
+    margin-bottom: 5px;
+}
+
+.buybutton {
+    padding: 10px 18px;
+    background: var(--text--color);
+    margin-bottom: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    color: var(--title--color);
+    border-radius: 15px;
+    border: none;
+}
+
+.buybutton:hover {
+    background: #ff5e00;
+}
+
+.description div {
+    margin-bottom: 5px;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 2px solid #400;
+    padding-bottom: 3px;
+    display: flex;
+    font-weight: bold;
+}
+
+#closebutton {
+    position: relative;
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--text--color);
+
+}
+
+.watchactions {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+#heartbutton {
+    background: transparent;
+    border: none;
+    color: #444;
+    cursor: pointer;
+}
+
+#heartbutton.like {
+    color: maroon;
+}
+
+  .footerz {
+    width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(0.5px);
+    background-color: rgba(53, 0, 0, 0.091);
+    display: flex;
+    border-top: 5px solid rgb(91, 91, 91);
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    border-radius: 50px;
+}
+
+
+.contentoffooter {
+    color: var(--title--color);
+    text-align: center;
+    font-family: "Darker Grotesque", sans-serif;
+}
+
+.contentoffooter h1, .address {
+    position: relative;
+    font-family: 'Melodrama', serif;
+    font-size: 110px;
+    background: linear-gradient(to right, var(--title--color), var(--text--color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.address {
+    margin-top: 0;
+    font-size: 13px;
+    font-family: "Darker Grotesque", sans-serif;
+}
+
+.ontheleft {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 180px;
+    height: auto;
+    color: var(--text--color);
+}
+
+.footerlogo {
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 100px;
+    height: auto;
+}
+
+/* The footer links */
+
+.footerlinks {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.links {
+    background-color: var(--title--color);
+    color: var(--text--color);
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 3px solid #830000;
+    font-family: "melodrama", sans-serif;
+
+}
+
+.links:hover {
+    background-color: transparent;
+    color: var(--text--color);
+    border-color: var(--title--color) ;
+}
+
+
+/* This section of the CSS file deals with the contact us section */
+
+.map {
+    width: 70%;
+}
+
+.signupbox {
+    position: relative;
+    background-color: var(--text--color);
+    width: 650px;
+    height: 250px;
+    z-index: 10;
+    top: -1050px;
+    left: 650px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    z-index: 110;
+    align-items: left;
+    text-align: left;
+    justify-content: center;
+    border: #06795D;
+    border-radius: 10px;
+    opacity: 95%;
+}
+
+.newsletter h3, h1 {
+    margin-bottom: 25px;
+    color: var(--title--color);
+}
+
+
+input,textarea {
+    padding: 15px;
+    border: 3px solid #06795D;
+    border-radius: 10px;
+    font-size: large;
+    background-color: transparent;
+    border: none;
+    color: #06795D;
+    text-decoration: underline;
+}
+
+.signupbutton {
+    width: 70%;
+    padding: 15px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    color: var(--text--color);
+    transition: var(--text--color) 0.3s ease;
+    margin-top: 20px;
+    background-color: var(--title--color);
+}
+
+.signupbutton:hover {
+    background-color: #ff5e00;
+}
+
+.sectionz {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.map img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    left: 500px;
+    opacity: 80%;
+}
+
+
+/* This is the contact us section of the contact page */
+
+.contactbox {
+    position: relative;
+    width: 1150px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--title--color);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    top: -1000px;
+    opacity: 95%;
+
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    opacity: 100%;
+}
+
+.groupf {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.ffwidth {
+    grid-column: span 1;
+
+}
+
+.form label {
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--text--color);
+    display: block;
+
+}
+
+.form input, textarea {
+    padding: 15px;
+    border: 2px solid var(--text--color);
+    border-radius: 10px;
+
+}
+
+.form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox {
+    align-items: center;
+    flex-direction: row;
+}
+
+.checkbox input {
+    margin-right: 8px;
+}
+
+.statusss {
+    font-size: 20px;
+    background-color: snow;
+    border-radius: 5px;
+    height: 40px;
+}
+
+
+.checkbox label {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    line-height: 1.5;
+    color: var(--text--color);
+    font-size: 15px;
+}
+
+.formsubmit {
+    padding: 10px;
+    background: transparent;
+    background-color: var(--text--color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 19px;
+    transition: background 0.2s ease;
+}
+
+.formsubmit:hover {
+    background-color: #ff5e00;
+}
+
+.radiocontactpref label {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--text--color);
+    display: inline-block;
+    margin-right: 20px;
+
+}
+
+#mmcheck {
+    font-weight: lighter;
+}
+
+
+.processfrost, .verify, .condition {
+    position: relative;
+    color: var(--text--color);
+    margin-right: 60px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 120px;
+    z-index: 111;
+    backdrop-filter: blur(4.2px);
+    -webkit-backdrop-filter: blur(0.2px);
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.4s ease;
+    will-change: transform, opacity;
+}
+
+
+
+.processfrost.show, .verify.show, .condition.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+.verify {
+    margin-left: 60px;
+    text-align: left;
+}
+
+.descripcontainer, .verifycontainer, .conditionscontainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 60px;
+    text-align: right;
+}
+
+.verifycontainer {
+    justify-content: flex-start;
+    margin-left: 60px;
+    text-align: left;
+
+}
+
+
+.processdescription, .verifydescription, .conditions {
+    position: relative;
+    color: var(--text--color);
+    width: 700px;
+    backdrop-filter: blur(0.2px);
+    -webkit-backdrop-filter: blur(0.8px);
+    border-radius: 20px;
+    font-size: 30px;
+    z-index: 11;
+}
+
+.processimage, .verifyimage {
+    position: relative;
+    margin-top: -500px;
+    z-index: 1;
+    margin-left: 60px;
+    opacity: 70%;
+}
+
+.verimage {
+    margin-left: 660px;
+}
+
+
+.proimage {
+    min-width: 800px;
+    max-width: 100%;
+}
+
+.rolimage {
+    padding: 50px 0px;
+}
