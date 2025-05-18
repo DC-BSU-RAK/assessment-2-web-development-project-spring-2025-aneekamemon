@@ -8,15 +8,29 @@
     <link rel="stylesheet" href="shop.css">
         <title>Contact FROST</title>
 </head>
+
+    <!-- Custom fonts from fontshare and google fonts -->
+    <!-- External CSS stylesheet linked above as well -->
 <body>
+
+        <!-- Initial wrapper -->
+
     <header>
+
+            <!-- Navigation bar with all the clickable stickers in it -->
+
         <nav class="navbar">
+            <!-- Logo of the webpage - FROST -->
+
             <div class="logocontainer">
                 <div class="logo">
                     <img src="stickers/logo.png" class="frostlogoimg">
                 </div>
             </div>
             <div class="navtext">
+
+                <!-- Navigation links for all five pages -->
+
                 <a  href="FF.html"><img src="stickers/home.png" alt="home sticker" class="navsticker"></a>
                 <a href="shop.html"><img src="stickers/shop.png" alt="shop sticker" class="navsticker"></a>
                 <a  href="contact.html"><img src="stickers/contact.png" alt="contact sticker" class="navsticker"></a>
@@ -30,12 +44,17 @@
        
     <section>
         <div class="titleboxw">
+        <!-- Title of the page  -->
 
             <div class="titlec" id="titleFROSTw">
                 Contact FROST
             </div>
 
         </div>
+
+
+
+    <!-- Theme toggle sticker in the tag -->
 
 
         <button id="theme">
@@ -46,7 +65,7 @@
 
 
     <section class="sectionz">
-
+        <!-- A map added for aesthics in this section -->
         <aside class="map">
             <div class="imageofmap" >
                 <img src="images/map.jpg" alt="map of Dubai">
@@ -69,6 +88,8 @@
         </div>
     </section>
 
+    <!-- The contact box which is filled with input divs meant to be filled in
+     some of them are required and so the user cannot submit without filling in those -->
     <main class="contactbox">
 
         <form class="form">
@@ -82,6 +103,7 @@
                 <input type="text" placeholder="Query" required>
             </div>
 
+            <!-- A option section to choose one of the 3 options given -->
             <div class="groupf">
                     <label>Title *</label>
                     <select class="statusss" required>
@@ -101,6 +123,7 @@
                 <input type="text" required>
             </div>
 
+            <!-- A radio button option to only select either phone or email -->
             <div class="groupf">
                 <label>Contact Preference *</label>
                     <div class="radiocontactpref">                    
@@ -125,6 +148,7 @@
                 <input type="text" placeholder="+ 971"  required>
             </div>
 
+            <!-- A agreement section to terms and conditions -->
             <div class="groupf ffwidth">
                 <input type="checkbox" id="mmcheck"/>
                     <label for="mmcheck">
@@ -148,14 +172,17 @@
 
     </main>
 
+
+        <!-- The footer of the webpage that contains relevent information on email, address, and social media pages -->
+
     <footer class="footerz">
         <div class="contentoffooter">
             <h1>FROST</h1>
             <div class="footerlinks">
-                <a href="#" class="links">Instagram</a>
-                <a href="#" class="links">Behance</a>
-                <a href="#" class="links">LinkedIn</a>
-                <a href="#" class="links">Twitter</a>
+                <a class="links">Instagram</a>
+                <a class="links">Behance</a>
+                <a class="links">LinkedIn</a>
+                <a class="links">Twitter</a>
             </div>
             <div class="address">
                 <h2> Bath Spa Univeristy Rak </h2>
@@ -168,6 +195,8 @@
             <img src="stickers/logo.png" class="footerlogo">
         </div>
     </footer>
+
+    <!-- The javascript file link down below -->
 
     <script src="shop.js"></script>
 </body>
