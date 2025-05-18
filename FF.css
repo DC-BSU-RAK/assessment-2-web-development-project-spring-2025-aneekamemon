@@ -37,6 +37,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 60px;
 }
 
 
@@ -44,11 +45,13 @@ html, body {
 /* For the navstickers */
 
 .navsticker {
-    width: 220px;
+    width: 100px;
     height: auto;
     transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
     filter: var(--filtershadow);
     cursor: pointer;
+    margin-top: 30px;
+    margin-right: 80px;
 }
 
 .navsticker:hover {
@@ -59,11 +62,12 @@ html, body {
 .logocontainer {
     width: 100%;
     max-width: 150px;
-    padding: 0 10px;
+    padding: 10px 10px;
     margin-left: -160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .frostlogoimg {
@@ -163,9 +167,15 @@ html, body {
 #theme img, .viewallsticker img{
     background-color: transparent;
     border: none;
-    width: 200px;
+    width: 130px;
     position: relative;
     top: -800px;
+}
+
+#theme img {
+    margin-left: 40px;
+    margin-top: 40px;
+
 }
 
 #theme:hover, .viewallsticker:hover, .learnmoresticker:hover {
