@@ -54,7 +54,6 @@ html, body {
 }
 
 
-
 /* For the navbar  */
 
 .navbar {
@@ -64,21 +63,30 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    position: relative;
+    gap: 60px;
 }
+
 
 
 /* For the navstickers */
 
+.navtext {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 30px;
+}
+
+
 .navsticker {
     width: 100px;
     height: auto;
-    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, 
+    filter 0.2s ease, 
+    box-shadow 0.2s ease;
     filter: var(--filtershadow);
     cursor: pointer;
-    margin-top: 30px;
-    margin-right: 80px;
+
 }
 
 .navsticker:hover {
@@ -175,13 +183,14 @@ html, body {
 }
 
 .grid {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    min-height: 340px;
     flex: 1;
     position: relative;
     color: var(--text--color);
     padding: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    min-height: 340px;
+
 }
 
 /* This hover section causes the grid to rise upwards and create a sligh shadow 
@@ -219,6 +228,11 @@ beneath it */
 }
 
 .loadmorebutton {
+    font-weight: bolder;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border: 4px solid var(--title--color);
     margin: 10px auto 0;
     display: block;
     padding: 20px 35px ;
@@ -226,11 +240,7 @@ beneath it */
     border: none;
     border-radius: 30px;
     color: var(--text--color);
-    font-weight: bolder;
-    transition: background 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 20px;
-    border: 4px solid var(--title--color);
+
 }
 
 .loadmorebutton:hover {
@@ -243,15 +253,16 @@ beneath it */
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(5px);
-    display: flex;
-    z-index: 1000;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s ease;
     opacity: 1;
     pointer-events: auto;
+    backdrop-filter: blur(5px);
+    display: flex;
+    z-index: 1000;
+
 }
 
 .productwatch.hidden {
@@ -265,12 +276,13 @@ beneath it */
     color: var(--text--color);
     padding: 10px;
     border-radius: 5px;
-    max-width: 750px;
     width: 92%;
     gap: 12px;
     flex-wrap: wrap;
     display: flex;
     box-shadow: 0 0 35px rgba(129, 37, 37, 0.5);
+    max-width: 750px;
+
 
 }
 
@@ -321,13 +333,14 @@ beneath it */
 }
 
 .description div {
+    display: flex;
+    font-weight: bold;
     margin-bottom: 5px;
     justify-content: space-between;
     font-size: 20px;
     border-bottom: 2px solid #400;
     padding-bottom: 3px;
-    display: flex;
-    font-weight: bold;
+
 }
 
 #closebutton {
@@ -349,8 +362,9 @@ beneath it */
 #heartbutton {
     background: transparent;
     border: none;
-    color: #444;
+    color: var(--text--color);
     cursor: pointer;
+    font-size: 60px;
 }
 
 #heartbutton.like {
@@ -363,13 +377,14 @@ beneath it */
     position: relative;
     bottom: 0;
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(0.5px);
-    background-color: rgba(53, 0, 0, 0.091);
     display: flex;
     border-top: 5px solid rgb(91, 91, 91);
     font-family: 'Courier New', Courier, monospace;
     flex-direction: column;
     border-radius: 50px;
+    -webkit-backdrop-filter: blur(0.5px);
+    background-color: rgba(53, 0, 0, 0.091);
+
 }
 
 
@@ -456,9 +471,6 @@ beneath it */
     width: 650px;
     height: 250px;
     z-index: 10;
-    top: -1050px;
-    left: 650px;
-    display: flex;
     flex-direction: column;
     padding: 30px;
     z-index: 110;
@@ -468,6 +480,10 @@ beneath it */
     border: #06795D;
     border-radius: 10px;
     opacity: 95%;
+    top: -1050px;
+    left: 650px;
+    display: flex;
+
 }
 
 .newsletter h3, h1 {
