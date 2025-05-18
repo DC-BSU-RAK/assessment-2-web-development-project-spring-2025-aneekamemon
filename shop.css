@@ -651,15 +651,33 @@ input,textarea {
 
 }
 
+.descripcontainer, .conditionscontainer {
+    position: relative;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+    z-index: 90;
+}
 
 
 .verifycontainer {
+    position: relative;
     justify-content: flex-start;
     margin-left: 60px;
     text-align: left;
-
+    opacity: 0;
+    transform: translateX(-800px);
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
+    z-index: 90;
 }
 
+.verifycontainer.show, .descripcontainer.show, .conditionscontainer.show {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 90;
+}
 
 .processdescription, .verifydescription, .conditions {
     position: relative;
@@ -679,13 +697,14 @@ input,textarea {
 .processimage, .verifyimage {
     position: relative;
     margin-top: -500px;
-    z-index: 1;
     margin-left: 60px;
     opacity: 70%;
 }
 
 .verimage {
+    position: relative;
     margin-left: 660px;
+    z-index: 0;
 }
 
 
@@ -814,3 +833,4 @@ input,textarea {
     margin-left: 30px;
     padding: 30px;
 }
+
