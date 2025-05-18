@@ -9,15 +9,24 @@
     <title>Shop FROST</title>
 </head>
 
+    <!-- Custom fonts from fontshare and google fonts -->
+    <!-- External CSS stylesheet linked above as well -->
 
 <body>
 
     
+    <!-- Initial wrapper -->
 
 
     <header>
+
+            <!-- Navigation bar with all the clickable stickers in it -->
+
         <nav class="navbar">
             <div class="logocontainer">
+
+            <!-- Logo of the webpage - FROST -->
+
                 <div class="logo">
                     <img src="stickers/logo.png" class="frostlogoimg">
                 </div>
@@ -33,6 +42,7 @@
         </nav>
     </header>
 
+        <!-- Title of the first page  -->
 
     <div class="titleboxw">
 
@@ -46,6 +56,9 @@
 
         </article>
     </div>
+    
+    
+    <!-- Theme toggle sticker in an aside tag -->
 
     <aside>
     <button id="theme">
@@ -53,11 +66,13 @@
     </button>
     </aside>
 
-
+    <!-- This section contains the watches in a grid that are spaced out to showcase the watches -->
     <main class="maincontent">
         <div id="grid" class="grid"></div>
         <button class="loadmorebutton" id="loadmorebutton">LOAD MORE</button>
+        <!-- A load more button added to showcase more watches if needed -->
 
+        <!-- A hidden section that can only be opened if clicked upon -->
         <div class="productwatch hidden" id="productwatch">
             <div class="watchcontent">
                 <div class="watchactions">
@@ -65,6 +80,7 @@
                     </button>
                     <button id="closebutton">X</button>
                 </div>
+                <!-- Watch images, information, prices, and names all listed here -->
                 <img id="watchImage" src="" alt="watches">
                 <div class="watchinfo">
                     <h1 id="watchName" ></h1>
@@ -82,15 +98,16 @@
         </div>
     </main>
 
+    <!-- The footer of the webpage that contains relevent information on email, address, and social media pages -->
 
     <footer class="footerz">
         <div class="contentoffooter">
             <h1>FROST</h1>
             <div class="footerlinks">
-                <a href="#" class="links">Instagram</a>
-                <a href="#" class="links">Behance</a>
-                <a href="#" class="links">LinkedIn</a>
-                <a href="#" class="links">Twitter</a>
+                <a class="links">Instagram</a>
+                <a class="links">Behance</a>
+                <a class="links">LinkedIn</a>
+                <a class="links">Twitter</a>
             </div>
             <div class="address">
                 <h2> Bath Spa Univeristy Rak </h2>
@@ -109,6 +126,7 @@
 
 
     </footer>
+    <!-- The javascript file link down below -->
 
     <script src="shop.js"></script>
 </body>
