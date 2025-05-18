@@ -123,8 +123,7 @@ html, body {
     --background--color: #fbf0d8;
     --title--color: #06795D;
     --text--color: #48192E;
-    --filtershadow: drop-shadow(0 0 28px rgba(88, 12, 68, 0.5));
-    --filtershadow-hover: drop-shadow(0 0 18px rgba(15, 100, 65, 0.8));
+
 
     }
 
@@ -132,8 +131,7 @@ html, body {
         --background--color: black;
         --title--color: #b02a29;
         --text--color: #fbf0d8;
-        --filtershadow: drop-shadow(0 0 28px rgba(255, 149, 0, 0.5));
-        --filtershadow-hover: drop-shadow(0 0 18px rgba(255, 102, 102, 0.8));
+
     }
     
     body {
