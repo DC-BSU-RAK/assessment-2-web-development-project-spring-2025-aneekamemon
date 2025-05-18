@@ -9,19 +9,25 @@
     <title>FROST</title>
 
 </head>
-
-
+    <!-- Custom fonts from fontshare and google fonts -->
+    <!-- External CSS stylesheet linked above as well -->
 
 <body>
     
+    <!-- Initial wrapper -->
     <section>
+
+    <!-- Navigation bar with all the clickable stickers in it -->
         <nav class="navbar">
+
+            <!-- Logo of the webpage - FROST -->
             <div class="logocontainer">
                 <div class="logo">
                     <img src="stickers/logo.png" class="frostlogoimg">
                 </div>
             </div>
             <div class="navtext">
+                <!-- Navigation links for all five pages -->
                 <a  href="FF.html"><img src="stickers/home.png" alt="home sticker" class="navsticker"></a>
                 <a href="shop.html"><img src="stickers/shop.png" alt="shop sticker" class="navsticker"></a>
                 <a  href="contact.html"><img src="stickers/contact.png" alt="contact sticker" class="navsticker"></a>
@@ -32,7 +38,7 @@
         </nav>
 
 
-
+    <!-- Slogan that contains the typewriter effect -->
 
         <article>
 
@@ -40,7 +46,7 @@
 
         </article>
 
-
+        <!-- Title of the first page  -->
         <main class="titlebox">
 
             <div class="title" id="titleFROST">
@@ -51,7 +57,7 @@
         </main>
 
         <article>
-
+            <!-- Description of the website within an article tag -->
             <div class="description">
                 At Frost we carry a select range of fine watches for
                 both the sophisticated collector and the every day user. 
@@ -66,7 +72,7 @@
         </article>
 
         <article>
-
+            <!-- Theme toggle and view all stickers together in another article tag -->
             <button id="theme">
                 <img class="themestickerlight"  id="themesticker" src="stickers/lightmode.png" alt="lightmode sticker">
             </button>
@@ -80,17 +86,18 @@
     </section>
 
     <article>
-
+        <!-- Description of the heading -->
         <div class="heading">
             JUST IN
         </div>
-
+            <!-- Start of the carousel section that displays five different watches -->
         <div class="carousel-container" id="carouselContainer">
-
+            <!-- A left arrow used to toggle between the watches -->
             <div class="arrow left" id="leftArrow">&#10094;</div>
 
             <div class="carousel" id="carousel">
-
+                    <!-- all five containers with images and videos as well as code
+                     implemented to keep them in a loop and muted -->
                 <div class="card">
                     <video src="videos/speedmaster.mp4" muted autoplay loop></video>
                     <img src="images/speedmaster.webp" class="hover-image" />
@@ -116,6 +123,8 @@
 
 
             </div>
+                        <!-- A right arrow used to toggle between the watches -->
+
             <div class="arrow right " id="rightArrow">&#10095;</div>
         </div>
 
@@ -125,10 +134,10 @@
             <p id="itemPrice"> Price </p>
             <p id="itemCategory"> Category: example </p>
         </div>
-
+        <!-- The panel used to store the related information for the corresponding watches -->
     </article>
 
-
+    <!-- A new section created for the origins sections -->
     <section>
 
         <div class="designsec1">
@@ -155,7 +164,8 @@
         <div class="designsec2">
 
 
-
+            <!-- General information about the brand, including introduction, values
+             idenity and shipment information -->
             <div class="aboutfrost">
                 <h1> About FROST </h1>
                 <p> FROST is a curated watch reselling brand built on precision, 
@@ -188,7 +198,7 @@
     </section>
 
     <section>
-
+        <!-- Another section that introduces the other grid with a view all sticker -->
         <div class="favoritescontainer">
 
             <div class="frostfavs" >
@@ -208,7 +218,8 @@
 
 
         <div class="grid">
-
+                <!-- A watch gallery grid that show cases watches with images,
+                 and links to the actual websites of these watch companies listed below -->
             <div class="galleryitem">
                 <div class="imagecontainer">
                     <img src="images/1.jpeg" class="galleryimage defaultimage" alt="watch image">
@@ -288,6 +299,7 @@
 
     </section>
 
+    <!-- The footer of the webpage that contains relevent information on email, address, and social media pages -->
     <footer class="footerz">
         <div class="contentoffooter">
             <h1>FROST</h1>
@@ -320,7 +332,7 @@
 
 
 
-
+    <!-- The javascript file link down below -->
 
     <script src="FF.js"></script>
 
