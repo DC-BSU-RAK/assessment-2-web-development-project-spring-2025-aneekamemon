@@ -193,10 +193,6 @@ function loadmore() {
 
     });
     index+= loaditems;
-
-    if (index >= watches.length) {
-        document.getElementById("loadmorebutton").style.display = "none";
-    }
 }
 
 document.getElementById("loadmorebutton").addEventListener("click", loadmore);
